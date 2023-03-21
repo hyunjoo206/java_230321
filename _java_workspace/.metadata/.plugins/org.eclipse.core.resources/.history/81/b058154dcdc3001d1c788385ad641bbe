@@ -1,0 +1,39 @@
+package day15;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class WordManager {
+	private ArrayList<Word> word = new ArrayList<>();
+//	private ArrayList<String> mean = new ArrayList<>();
+	
+	public void add(Scanner scan) {
+		System.out.println("단어를 추가하세요");
+		String inputword = scan.next();
+		System.out.println("뜻을 추가하세요");
+		String inputmean = scan.next();
+		
+		Word w = new Word(inputword, inputmean);
+		word.add(w);
+		System.out.println("단어가 추가되었습니다.");
+	}
+	
+	
+	public void printWord() {
+		System.out.println("--단어장--");
+		Collections.sort(word, new Comparator<Word>() {
+			public int compare(Word w1, Word w2) {
+				return w1.getWord().compareTo(w2.getWord());
+			}
+		});
+		
+		for(Word w : word) {
+			System.out.println(w.getWord()+":"+w.getMean());
+		}
+	}
+	
+	
+	
+}

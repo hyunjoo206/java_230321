@@ -1,0 +1,45 @@
+package product;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("===menu===");
+		System.out.println("1.제품추가");
+		System.out.println("2.제품리스트보기");
+		System.out.println("3.제품주문");
+		System.out.println("4.주문리스트 출력");
+		System.out.println("5.프로그램종료");
+		System.out.println("=========");
+		
+		ProductManager pm = new ProductManager();
+		Scanner scan = new Scanner(System.in);
+		System.out.print("원하시는 메뉴를 선택해주세요.>");
+		int input = scan.nextInt();
+		
+		switch(input) {
+		case 1 : 
+			System.out.println("메뉴를 등록하시겠습니까?(y/n)");
+			String answer = scan.next();
+			if(answer.equals("y")) {
+				System.out.println("메뉴: " );
+				String menu = scan.next();
+				System.out.println("가격: ");
+				int price = scan.nextInt();
+				Product p = new Product(menu, price);
+				
+			}
+			break;
+		case 2 : 
+			pm.printProduct();
+			break;
+		case 3 : break;
+		case 4 : break;
+		case 5 : break;
+		default : break;
+		}
+		
+	}
+
+}

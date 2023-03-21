@@ -1,0 +1,22 @@
+package day16;
+
+import java.util.ArrayList;
+
+public class Stream {
+
+	public static void main(String[] args) {
+		/* 문자열(이름)을 담는 리스트 생성 후 스트링으로 생성
+		 * 정렬하여 출력
+		 * */
+		
+		ArrayList<String> list = new ArrayList<>();
+		list.add("사과");
+		list.add("배");
+		list.add("포도");
+		list.add("딸기");
+		
+		Stream <String> s = list.stream();
+		s.
+	}
+
+}

@@ -1,0 +1,47 @@
+package day16;
+
+import java.util.ArrayList;
+
+public class TravelMain {
+
+	public static void main(String[] args) {
+		/*
+			여행상품 
+			여행비용은 15세 이상은 100만원,
+			15세 미만은 50만원이다.
+			고객 3명이 패키지 여행을 떠나려고 할 때 
+			1. 비용계산
+			2. 고객 명단 출력
+			
+			고객은 class로 생성, 
+			main에서 ArrayList로 추가.
+			
+			출력할 내용은 아래와 같다.
+			
+			-----------고객정보--------------
+			이름 : 이순신, 나이: 40, 비용: 100
+			이름 : 신사임당, 나이:35, 비용 : 100
+			이름 : 이아들, 나이:10, 비용 : 50
+			--------------------------------------
+			총 여행비용 : 250
+		*/
+		
+		ArrayList <Client> list = new ArrayList<>();
+		list.add(new Client("이순신", 40));
+		list.add(new Client("신사임당", 35));
+		list.add(new Client("이아들", 10));
+		
+		System.out.println("-----------고객정보----------");
+		list.stream().forEach(a->System.out.println("이름:"+a.getName()+", 나이:"+a.getAge()+", 비용:"+a.getPrice()));
+		System.out.println("--------------------------");
+		
+		int priceSum = list.stream().mapToInt(a->a.getPrice()).sum();
+		System.out.println("총 여행비용: " +priceSum);
+		
+		//20세 이상 성인만 이름을 정렬하여 출력
+		System.out.println("-----20세 이상 성인만 출력-----");
+		list.stream().filter(a-> a.getAge()>=20).forEach(a-> System.out.print(a.getName()+" "));
+		
+	}
+
+}

@@ -1,0 +1,86 @@
+package day16;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+
+
+public class EnglishDictionary {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Word w = new Word();
+		int menu = 0;
+		
+		do {
+			System.out.println("---단어장---");
+			System.out.println("1.단어등록 | 2.단어출력 | 3.종료");
+			System.out.println("메뉴선택>");
+			menu = scan.nextInt();
+			
+			switch(menu) {
+			case 1 : w.makeWord(scan); break;
+			case 2 : w.printWord(); break;
+			case 3 : break;
+			default: 
+				System.out.println("잘못된 메뉴");
+			}
+			
+		}while(menu!=3);
+		System.out.println("종료!");
+	
+	}
+	
+}
+
+
+class Word{
+	//hello  : 안녕, 아침인사, 반가움, 비슷한말 hi
+	private Map<String, ArrayList<String>> words = new HashMap<>();
+	private ArrayList<String>word = new ArrayList<>();
+	
+	/* y를 입력하면 단어를 입력, n을 입력하면 종료
+	 * 단어가 이미 있다면 "이미 있는 단어입니다."라고 뜨고, 등록 되지 않도록
+	 * 메서드명 : makeWord
+	 * 
+	 * */
+	
+	public void makeWord (Scanner scan) {
+		char is = 'y';
+		char wIs = 'y';
+		a: while(is == 'y') {
+			System.out.println("단어 입력:");
+			String newWord = scan.next();
+			
+			for(String s : words.keySet()) {
+				if(newWord.equals(s)) {
+					System.out.println("이미 있는 단어입니다.");
+					System.out.println("다른 단어를 입력하세요(y/n)");
+					wIs = scan.next().charAt(0);
+					break;
+				}
+			}
+			
+			
+		}
+			System.out.println("의미 입력:");
+			scan.nextLine();
+			String mean = scan.nextLine();
+			
+			ArrayList<String> meanList = new ArrayList<>();
+			meanList.add(mean);
+			System.out.println(newWord, meanList);
+			System.out.println(newWord + "단어가 등록되었습니다.");
+			
+		}
+			
+		
+	/* 단어 출력 메서드
+	 * 메서드 : printWord() 
+	 * */
+	public void printWord() {}
+		sysout
+	}
+
+

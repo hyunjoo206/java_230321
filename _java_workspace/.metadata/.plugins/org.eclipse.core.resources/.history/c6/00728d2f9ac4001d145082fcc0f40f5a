@@ -1,0 +1,22 @@
+package day16;
+
+import java.util.ArrayList;
+
+public class TravelMain {
+
+	public static void main(String[] args) {
+		
+		ArrayList <Client> list = new ArrayList<>();
+		list.add(new Client("이순신", 40));
+		list.add(new Client("신사임당", 35));
+		list.add(new Client("이아들", 10));
+		
+		System.out.println("-----------고객정보----------");
+		list.stream().forEach(Client->System.out.println("이름:"+Client.getName()+"나이:"+Client.getAge()+"비용:"+Client.getPrice()));
+		System.out.println("--------------------------");
+		
+		int priceSum = list.stream().mapToInt(a->a.getPrice()).sum();
+		System.out.println("총 여행비용: " +priceSum);
+	}
+
+}

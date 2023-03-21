@@ -1,0 +1,5 @@
+apple:사과
+banana:바나나
+grape:포도
+peach:복숭아
+pineapple:파인애플

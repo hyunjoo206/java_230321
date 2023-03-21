@@ -1,0 +1,41 @@
+package day15;
+
+import java.util.Scanner;
+
+public class WordMain {
+
+	public static void main(String[] args) {
+		Word w = new Word();
+		Scanner scan = new Scanner(System.in);
+		int menu = -1;
+		
+		do {
+			
+			System.out.println();
+			System.out.println("----메뉴----");
+			System.out.println("1.단어추가");
+			System.out.println("2.단어출력");
+			System.out.println("3.단어검색");
+			System.out.println("4.단어수정");
+			System.out.println("5.단어삭제");
+			System.out.println("6.종류");
+			System.out.println("-----------");
+
+			
+			int menu =scan.nextInt();
+			
+			switch(menu) {
+			case 1 : break;
+			case 2 : break;
+			case 3 : break;
+			case 4 : break;
+			case 5 : break;
+			case 6 : break;
+			default :
+			}
+			
+			
+		}while(menu!=6);
+	}
+
+}

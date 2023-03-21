@@ -1,0 +1,30 @@
+package day15;
+
+import java.util.Scanner;
+
+public class WordMain {
+
+	public static void main(String[] args) {
+		Word w = new Word();
+		Scanner scan = new Scanner(System.in);
+		
+		do {
+			
+			int menu =s can.nextInt();
+			
+			switch(menu) {
+			case 1 : break;
+			case 2 : break;
+			case 3 : break;
+			case 4 : break;
+			case 5 : break;
+			case 6 : break;
+			default :
+				System.out.println("");
+			}
+			
+			
+		}while(cmenu!=6);
+	}
+
+}

@@ -1,0 +1,44 @@
+package day15;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StudentManager implements Program {
+
+	  private ArrayList<Student> students; // 학생 정보를 담은 리스트
+
+	  public StudentManager() {
+	      students = new ArrayList<>();
+	   }
+	    
+	    
+	@Override
+	public void printStudent() {
+		System.out.println("학생리스트");
+	}
+
+	@Override
+	public void insertStudent(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void searchStudent(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void registerSubject(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteSubject(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

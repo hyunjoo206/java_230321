@@ -1,0 +1,99 @@
+package day15;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class WordManager {
+	private ArrayList<Word> word = new ArrayList<Word>();
+	
+	public void add(Scanner scan) {
+		System.out.println("단어를 추가하세요");
+		String inputword = scan.next();
+		System.out.println("뜻을 추가하세요");
+		String inputmean = scan.next();
+		
+		Word w = new Word(inputword, inputmean);
+		word.add(w);
+		System.out.println("단어가 추가되었습니다.");
+	}
+	
+	
+	public void printWord() {
+		System.out.println("--단어장--");
+//		word.sort(new Comparator<Word>() { //Collections가 안 되는 이유는 값이 2개라서 뭘 기준으로 정렬할지 모르기 때문
+//
+//			@Override
+//			public int compare(Word o1, Word o2) {
+//				// TODO Auto-generated method stub
+//				return o1.getWord().compareTo(o2.getWord());
+//			}
+//		});
+		
+		//정렬
+		Collections.sort(word, new Comparator<Word>(){	
+			public int compare(Word o1, Word o2) {
+			return o1.getWord().compareTo(o2.getWord());
+		}
+		} );
+		
+		//출력
+		for(Word tmp : word) {
+			System.out.println(tmp.getWord()+":"+tmp.getMean());
+		}
+	}
+	
+	
+	public void searchWord(Scanner scan) {
+		System.out.println("검색할 단어를 입력하세요");
+		String inputword = scan.next();
+		
+		for(Word w : word) {
+			if(w.getWord().equals(inputword)) {
+				System.out.println(w.getWord()+":"+w.getMean());
+			}
+		}
+	}
+	
+	
+	public void updateWord(Scanner scan) {
+		System.out.println("수정할 단어를 입력하세요");
+		String inputword = scan.next();
+		Word upword = null;
+		
+		for(Word w : word) {
+			if(w.getWord().equals(inputword)) {
+				upword = w;
+				break;
+			}
+		}
+		
+		if(upword == null) {
+			System.out.println("해당하는 단어가 없습니다.");
+		}
+		
+		System.out.println("수정할 의미를 입력하세요");
+		String inputmean = scan.next();
+		upword.setMean(inputmean);
+		System.out.println("단어가 수정되었습니다.");
+		}
+		
+
+	
+	public void deleteWord(Scanner scan) {
+		System.out.println("삭제할 단어를 입력하세요");
+		String inputword = scan.next();
+		for(int i=0; i<word.size(); i++) {
+			if(word.get(i).getWord().equals(inputword)) {
+				word.remove(i);
+				System.out.println("삭제되었습니다.");
+				return;
+			}
+		}
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,106 @@
+package day15;
+
+public class Subject {
+	
+	/*	과목클래스 : 한 과목의 정보를 나타내는 클래스
+		- 과목코드, 과목명, 학점, 시수, 교수명, 학기, 분류, 수업시간표 등
+	*/
+	private String code;
+	private String name;
+	private int credit; //학점
+	private int hours; //시수
+	private String professor; //교수명
+	private int semester; 
+	private String category; //분류 
+	private String timetable;
+	
+	// 기본 생성자
+	public Subject() {};
+	
+	// 생성자
+	public Subject(String code, String name, int credit, int hours,
+			String professor,int semester,String category,String timetable) {
+		this.code =code;
+	    this.name = name;
+	    this.credit = credit;
+	    this.hours = hours;
+	    this.professor = professor;
+	    this.semester = semester;
+	    this.category = category;
+	    this.timetable = timetable;
+	}
+
+	@Override
+	public String toString() {
+		return "Subject [code=" + code + ", name=" + name + ", credit=" + credit + ", hours=" + hours + ", professor="
+				+ professor + ", semester=" + semester + ", category=" + category + ", timetable=" + timetable + "]";
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getCredit() {
+		return credit;
+	}
+
+	public void setCredit(int credit) {
+		this.credit = credit;
+	}
+
+	public int getHours() {
+		return hours;
+	}
+
+	public void setHours(int hours) {
+		this.hours = hours;
+	}
+
+	public String getProfessor() {
+		return professor;
+	}
+
+	public void setProfessor(String professor) {
+		this.professor = professor;
+	}
+
+	public int getSemester() {
+		return semester;
+	}
+
+	public void setSemester(int semester) {
+		this.semester = semester;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getTimetable() {
+		return timetable;
+	}
+
+	public void setTimetable(String timetable) {
+		this.timetable = timetable;
+	}
+	
+
+	
+	
+}

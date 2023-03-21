@@ -1,0 +1,14 @@
+package day15;
+
+import java.util.ArrayList;
+
+public class SaleManager {
+	Scanner scan = new Scanner(System.in);
+	private ArrayList<Sale<String, Integer>> product = new ArrayList<>();
+	private ArrayList <Sale<String, Integer>> order = new ArrayList<Sale<String, Integer>> ();
+
+	public void add() {
+		System.out.println("제품명");
+		String menu = scan.next();
+	}
+}

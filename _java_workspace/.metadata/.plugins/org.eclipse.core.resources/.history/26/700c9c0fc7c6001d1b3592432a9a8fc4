@@ -1,0 +1,9 @@
+package day17;
+
+public class InPutStreamEx01 {
+
+	public static void main(String[] args) {
+		//FileInputStream - 바이트, 기반 스트림
+	}
+
+}

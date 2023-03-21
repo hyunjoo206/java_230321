@@ -1,0 +1,38 @@
+package day16;
+
+import java.util.ArrayList;
+import java.util.stream.Stream;
+
+public class StreamEx {
+
+	public static void main(String[] args) {
+		/* 문자열(이름)을 담는 리스트 생성 후 스트링으로 생성
+		 * 정렬하여 출력
+		 * */
+		
+		ArrayList<String> list = new ArrayList<>();
+		list.add("사과");
+		list.add("배");
+		list.add("포도");
+		list.add("황도복숭아");
+		list.add("노란바나나");
+		list.add("빨간딸기");
+		
+		System.out.println("----오름차순 정렬후----");
+		
+		Stream <String> s = list.stream();
+		s.sorted().forEach(a-> System.out.println(a));
+		
+//		Stream <String> ss = list.stream();
+//		ss.sorted().forEach(System.out::println); 이렇게 찍어도 나옴
+		
+		System.out.println("-----5글자이상----");
+		//글자수가 5글자 이상인 이름만 출력
+		list.stream().filter(a-> a.length()>=5).forEach(System.out::println);
+		
+		//각자 이름의 글자수를 출력
+		list.stream().map(n-> n.length()).forEach(System.out::println);
+	
+	}
+
+}

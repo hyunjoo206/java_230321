@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;miniProject.pokemon.java&apos; to &apos;pokemonList.java&apos;&#x0D;&#x0A;- Original project: &apos;miniProject&apos;&#x0D;&#x0A;- Original element: &apos;miniProject.pokemon.java&apos;&#x0D;&#x0A;- Renamed element: &apos;miniProject.pokemonList.java&apos;" description="Rename compilation unit &apos;pokemon.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;miniProject{pokemon.java" name="pokemonList.java" references="false" stamp="1677044166947" version="1.0"/>
+</session>
